@@ -1,0 +1,97 @@
+/* src/styles/globals.css */
+/* Tailwind base, components, utilities */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+:root {
+  --font-body: 'Inter', sans-serif;
+  --font-heading: 'Inter', sans-serif;
+  --color-primary: #0f62fe;
+  --color-secondary: #00c8a7;
+}
+
+/* Global resets */
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-body);
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  @apply inline-block font-medium rounded-lg transition;
+}
+
+.btn--primary {
+  @apply bg-primary text-white px-6 py-2;
+}
+
+.btn--primary:hover {
+  @apply bg-primary bg-opacity-90;
+}
+
+.btn--secondary {
+  @apply bg-secondary text-white px-6 py-2;
+}
+
+.btn--secondary:hover {
+  @apply bg-secondary bg-opacity-90;
+}
+/* Simple blink cursor */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.animate-blink {
+  animation: blink 1s step-start infinite;
+}
+
+/* Utility for containers */
+.container {
+  @apply max-w-5xl mx-auto;
+}
+
+/* Mobile menu */
+.menu-panel {
+  display: none;
+}
+
+.menu-open .menu-panel {
+  display: block;
+}
+
+/* src/styles/globals.css */
+@layer components {
+  /* Hero de l’article : hauteur, overlay et titre positionné */
+  .article-hero {
+    @apply relative w-full mb-16 md:mb-24;
+  }
+  .article-hero .cover-overlay {
+    @apply absolute inset-0 bg-black/30;
+  }
+  .article-hero .cover-content {
+    @apply absolute bottom-4 left-4 md:bottom-8 md:left-8 text-white;
+  }
+
+  /* Contenu Markdown : espace plus généreux entre les éléments */
+  .article-content {
+    /* limite largeur, centrage et padding */
+    @apply container mx-auto px-6 mb-32;
+  }
+  .article-content > * + * {
+    @apply mt-10;
+  }
+
+  /* Style pour le bouton retour */
+  .back-link {
+    @apply inline-block text-sm text-white underline mb-2;
+  }
+}
