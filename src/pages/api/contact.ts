@@ -1,10 +1,14 @@
 // src/pages/api/contact.ts
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import nodemailer from "nodemailer";
 
 type Data = { ok: boolean } | { error: string };
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse<Data>
+) {
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Méthode non autorisée" });
   }
@@ -14,7 +18,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     return res.status(400).json({ error: "Champs manquants" });
   }
 
-  // Configure transporteur via .env (voir README)
+  // Transporteur SMTP configuré depuis .env.local
   const transporter = nodemailer.createTransport({
     host: process.env.SMTP_HOST,
     port: Number(process.env.SMTP_PORT),
@@ -35,7 +39,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     });
     return res.status(200).json({ ok: true });
   } catch (err) {
-    console.error(err);
+    console.error("Erreur envoi mail:", err);
     return res.status(500).json({ error: "Échec de l’envoi" });
   }
 }
