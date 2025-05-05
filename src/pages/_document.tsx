@@ -17,7 +17,6 @@ export default class MyDocument extends Document {
     return (
       <Html lang="fr" className="dark">
         <Head>
-          {/* You can add global meta tags or fonts here */}
           <link
             rel="preconnect"
             href="https://fonts.googleapis.com"

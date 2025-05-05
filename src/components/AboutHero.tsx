@@ -15,39 +15,33 @@ export default function AboutHero() {
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
     >
-      {/* Photo pro */}
-      <motion.div
-        className="w-64 h-64 relative rounded-full overflow-hidden flex-shrink-0"
-        initial={{ scale: 0.8, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 0.8 }}
-      >
+      {/* Photo de profil */}
+      <div className="w-48 h-48 relative rounded-full overflow-hidden">
         <Image
           src="/images/profile.jpg"
           alt="Photo de Grégoire Fontaine"
-          fill
-          style={{ objectFit: "cover" }}
+          layout="fill"
+          objectFit="cover"
         />
-      </motion.div>
+      </div>
 
-      {/* Bio */}
+      {/* Texte d’introduction */}
       <motion.div
-        className="max-w-2xl space-y-4"
-        initial={{ opacity: 0, x: 50 }}
+        className="space-y-4 max-w-2xl"
+        initial={{ opacity: 0, x: 20 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
       >
-        <h1 className="text-4xl font-heading font-bold">Qui suis-je ?</h1>
+        <h1 className="text-4xl font-heading font-bold">
+          Bonjour, je suis <span className="text-primary">Grégoire Fontaine</span>
+        </h1>
         <p className="text-neutral-700 dark:text-neutral-300">
-          J’ai <strong>20 ans</strong> et je prépare un <strong>BTS SIO </strong> 
-          option <strong>SISR</strong> à CaenSup Sainte‑Ursule. Passionné par 
-          les infrastructures réseau, la sécurité et le support technique.
+          J’ai <strong>20 ans</strong> et je prépare un <strong>BTS SIO</strong> option{" "}
+          <strong>SISR</strong> à CaenSup Sainte-Ursule. Passionné par les infrastructures réseau, la sécurité et le support technique.
         </p>
         <p className="text-neutral-700 dark:text-neutral-300">
-          Mon objectif est d’intégrer un poste d’Administrateur Systèmes et 
-          Réseaux en alternance pour consolider mes compétences et mener à bien 
-          des projets d’envergure.
+          Mon objectif est d’intégrer une <strong>Licence STS Sécurité des Réseaux et Cybersécurité</strong> en alternance pour l’année académique 2025-2026.
         </p>
       </motion.div>
     </motion.div>

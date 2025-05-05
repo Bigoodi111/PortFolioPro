@@ -32,6 +32,20 @@ const skillsData: SkillCategory[] = [
     ],
   },
   {
+    title: "Réseaux & infrastructure",
+    items: [
+      "Routage & switching Cisco",
+      "DHCP & DNS",
+      "Administration Windows Server 2019/2022",
+      "Virtualisation",
+      "Active Directory",
+    ],
+  },
+  {
+    title: "Outils & supervision",
+    items: ["Zabbix", "NinjaOne RMM", "Centralisation des logs"],
+  },
+  {
     title: "Documentation & veille",
     items: [
       "Rédaction de procédures",
@@ -39,15 +53,19 @@ const skillsData: SkillCategory[] = [
       "Veille technologique",
     ],
   },
+  {
+    title: "Certifications",
+    items: ["Pix : 595 (P-HQBJTTKM)", "MOOC SecNum Académie"],
+  },
 ];
 
 export default function SkillsList() {
   return (
-    <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
       {skillsData.map((cat, i) => (
         <motion.div
           key={cat.title}
-          className="bg-white dark:bg-gray-700 p-6 rounded-lg shadow hover:shadow-lg transition"
+          className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

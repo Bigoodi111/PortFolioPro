@@ -32,9 +32,9 @@ export default function SkillsPreview() {
           </p>
         </div>
         <div className="p-6 bg-white dark:bg-gray-700 rounded-lg shadow">
-          <h3 className="text-xl font-semibold mb-2">Veille & docs</h3>
+          <h3 className="text-xl font-semibold mb-2">Documentation & veille</h3>
           <p className="text-neutral-600 dark:text-neutral-300">
-            Rédaction de procédures et veille technologique
+            Rédaction de procédures et veille juridique et technologique
           </p>
         </div>
       </div>

@@ -19,7 +19,7 @@ export default function Footer() {
             href="mailto:gregoire.fontaine@example.com"
             className="hover:text-primary transition"
           >
-            gregoire.fontaine@example.com
+            gregoire.fontaine@sts-sio-caen.info
           </a>
         </div>
       </div>

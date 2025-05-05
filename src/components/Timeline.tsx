@@ -12,19 +12,24 @@ interface Step {
  */
 const steps: Step[] = [
   {
-    date: "2022",
-    title: "Baccalauréat Général options : Numérique Sciences Informatiques et Mathématique",
+    date: "2020-2023",
+    title: "Baccalauréat Général options : Numérique Sciences Informatiques et Mathématiques",
     description: "Mention Assez Bien – Institut Lemonnier, Caen",
   },
   {
-    date: "2022–2024",
+    date: "2023–2025",
     title: "BTS SIO – Option SISR",
     description: "CaenSup Sainte‑Ursule",
   },
   {
-    date: "Mai 2024",
-    title: "Stage SoftAdmin",
-    description: "Support NinjaOne, gestion tickets, déploiement réseau",
+    date: "Mai-Août 2024",
+    title: "Stage puis CDD chez SoftAdmin",
+    description: "Assistance aux utilisateurs, configuration matérielle, supervision d'infrastructures.",
+  },
+  {
+    date: "Décembre 2024 - Février 2025",
+    title: "Stage chez SoftAdmin",
+    description: "Assistance aux utilisateurs, configuration matérielle, nationalisation d'infrastructure, mise en conformité aux normes."
   },
 ];
 
